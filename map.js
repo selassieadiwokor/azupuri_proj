@@ -1,5 +1,4 @@
-
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+var mymap = L.map('mapid').setView([37.9692566,-91.7908471,], 8);
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -9,3 +8,10 @@ var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(mymap);
+
+
+
+		for (var i = 0; i < myData.length; i++) {
+			//console.log(myData[i][0]);
+		  L.marker([myData[i][0], myData[i][1]]).addTo(mymap).bindPopup(myData[i][2]);;
+		}
