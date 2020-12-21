@@ -14,5 +14,5 @@
 	//loop to plot
 	for (var i = 0; i < myData.length; i++) {
 		//console.log(myData[i][0]);
-	  L.marker([myData[i][0], myData[i][1]]).addTo(mymap).bindPopup(myData[i][2]);;
+	  L.marker([myData[i][0], myData[i][1]]).addTo(mymap).bindPopup(myData[i][2]);
 	}
